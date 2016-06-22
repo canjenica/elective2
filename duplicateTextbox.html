@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC>
+<html>
+<head>
+	<title>5 Duplicate Input Box</title>
+</head>
+<body>
+	<h3>5 Duplicate Input Box</h3>
+	<input type="text" name="input1" value="Something Text" id="text1" onkeyup="textChange('text1')"/><br />
+	<input type="text" name="input2" value="Something Text" id="text2" onkeyup="textChange('text2')"/><br />
+	<input type="text" name="input3" value="Something Text" id="text3" onkeyup="textChange('text3')"/><br />
+	<input type="text" name="input4" value="Something Text" id="text4" onkeyup="textChange('text4')"/><br />
+	<input type="text" name="input5" value="Something Text" id="text5" onkeyup="textChange('text5')"/><br />
+</body>
+<script>
+	function textChange(textpass){
+		var input = document.getElementById(textpass);
+		var change = document.getElementsByTagName('input');
+
+		for (var i = 0 ; i < change.length;  i++) {
+			 change[i].value = input.value; 
+		}
+	}
+</script>
+</html>
